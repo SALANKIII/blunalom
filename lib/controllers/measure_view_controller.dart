@@ -15,19 +15,19 @@ class MeasureViewController extends GetxController{
   TextEditingController caloricIntakeController = TextEditingController();
 
   void navToProfileView(){
-    Get.to(ProfileView());
+    Get.to(ProfileView(), transition: Transition.cupertino);
   }
   void navToHistoryView(){
-    Get.to(HistoryView());
+    Get.to(HistoryView(), transition: Transition.cupertino);
   }
   void navToWorkoutView(){
-    Get.to(WorkoutView());
+    Get.to(WorkoutView(), transition: Transition.cupertino);
   }
   void navToExercisesView(){
-    Get.to(ExercisesView());
+    Get.to(ExercisesView(), transition: Transition.cupertino);
   }
   void navToMeasureView(){
-    Get.to(MeasureView());
+    Get.to(MeasureView(), transition: Transition.cupertino);
   }
 
   void navToWeightView(){

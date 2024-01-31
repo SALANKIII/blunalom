@@ -20,14 +20,13 @@ class MeasureView extends StatelessWidget {
                   SizedBox(height: 10),
                   Text("Core",
                       style: TextStyle(fontSize: 18, color: Color(0xFFCCCCCC))),
-                  SizedBox(height: 5),
+                  SizedBox(height: 10),
                   TextButton(
                       onPressed: () {
                         controller.navToWeightView();
                       },
                       child: Text("Weight",
                           style: TextStyle(fontSize: 25, color: Colors.white))),
-                  SizedBox(height: 5),
                   Text(
                     controller.weightController.text,
                     style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
