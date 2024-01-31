@@ -1,18 +1,15 @@
-import 'package:blunalom/controllers/exercise_view_controller.dart';
+import 'package:blunalom/controllers/workout_view_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ExercisesView extends StatelessWidget {
-  ExercisesViewController controller = Get.put(ExercisesViewController());
+class WorkoutView extends StatelessWidget {
+  WorkoutViewController controller = Get.put(WorkoutViewController());
 
   @override
   Widget build(BuildContext context) {
-    return  GetBuilder<ExercisesViewController>(
-      init: controller,
-      builder: (_) {
-        return Scaffold(
-          body: Column(),
-          bottomNavigationBar: BottomAppBar(
+    return Scaffold(
+      body: Column(),
+      bottomNavigationBar: BottomAppBar(
                   child: Padding(
                     padding:
                         EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
@@ -63,8 +60,6 @@ class ExercisesView extends StatelessWidget {
                     ),
                   ),
                 ),
-        );
-      }
     );
   }
 }

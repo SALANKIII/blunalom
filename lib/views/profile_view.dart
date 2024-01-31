@@ -1,13 +1,13 @@
-import 'package:blunalom/controllers/exercise_view_controller.dart';
+import 'package:blunalom/controllers/profile_view_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ExercisesView extends StatelessWidget {
-  ExercisesViewController controller = Get.put(ExercisesViewController());
+class ProfileView extends StatelessWidget {
+  ProfileViewController controller = Get.put(ProfileViewController());
 
   @override
   Widget build(BuildContext context) {
-    return  GetBuilder<ExercisesViewController>(
+    return GetBuilder<ProfileViewController>(
       init: controller,
       builder: (_) {
         return Scaffold(

@@ -1,13 +1,13 @@
-import 'package:blunalom/controllers/exercise_view_controller.dart';
+import 'package:blunalom/controllers/history_view_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ExercisesView extends StatelessWidget {
-  ExercisesViewController controller = Get.put(ExercisesViewController());
+class HistoryView extends StatelessWidget {
+  HistoryViewController controller = Get.put(HistoryViewController());
 
   @override
   Widget build(BuildContext context) {
-    return  GetBuilder<ExercisesViewController>(
+    return GetBuilder<HistoryViewController>(
       init: controller,
       builder: (_) {
         return Scaffold(
