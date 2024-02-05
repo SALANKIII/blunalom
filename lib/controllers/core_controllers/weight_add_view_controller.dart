@@ -6,11 +6,6 @@ class WeightAddViewController extends GetxController {
   TextEditingController weight = TextEditingController();
   DateTime datetime = DateTime.now();
 
-  void setDateTime(DateTime date) {
-    datetime = date;
-    update();
-  }
-
   void kiurites() {
     weight.clear();
   }

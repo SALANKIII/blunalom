@@ -11,6 +11,14 @@ class ExercisesView extends StatelessWidget {
       init: controller,
       builder: (_) {
         return Scaffold(
+          appBar: AppBar(
+              title: Text(
+                "Exercises",
+                style: TextStyle(fontSize: 27),
+              ),
+              centerTitle: true,
+              automaticallyImplyLeading: false,
+            ),
           body: Column(),
           bottomNavigationBar: BottomAppBar(
                   child: Padding(

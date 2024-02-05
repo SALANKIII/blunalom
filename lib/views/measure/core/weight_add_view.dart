@@ -19,19 +19,6 @@ class WeightAddView extends StatelessWidget {
               TextField(
                 controller: controller.weight,
               ),
-              
-              Container(
-                height: 150,
-                child: CupertinoDatePicker(
-                  initialDateTime: DateTime.now(),
-                  mode: CupertinoDatePickerMode.date,
-                  dateOrder: DatePickerDateOrder.ymd,
-                  use24hFormat: true,
-                  onDateTimeChanged: (date) {
-                    controller.setDateTime(date);
-                  },
-                ),
-              ),
               CupertinoButton(
                   color: Colors.blue,
                   child: Text("Save changes"),
