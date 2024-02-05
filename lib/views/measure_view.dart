@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MeasureView extends StatelessWidget {
-  MeasureViewController controller = Get.put(MeasureViewController());
+  MeasureViewController controller = MeasureViewController();
 
   @override
   Widget build(BuildContext context) {
@@ -11,49 +11,248 @@ class MeasureView extends StatelessWidget {
         init: controller,
         builder: (_) {
           return Scaffold(
-            body: Padding(
-              padding: EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Measure", style: TextStyle(fontSize: 40)),
-                  SizedBox(height: 10),
-                  Text("Core",
-                      style: TextStyle(fontSize: 18, color: Color(0xFFCCCCCC))),
-                  SizedBox(height: 10),
-                  TextButton(
-                      onPressed: () {
-                        controller.navToWeightView();
-                      },
-                      child: Text("Weight",
-                          style: TextStyle(fontSize: 25, color: Colors.white))),
-                  Text(
-                    controller.weightController.text,
-                    style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
-                  ),
-                  SizedBox(height: 5),
-                  TextButton(
-                      onPressed: () {
-                        controller.navToBodyFatPercentageView();
-                      },
-                      child: Text("Body fat percentage",
-                          style: TextStyle(fontSize: 25, color: Colors.white))),
-                  Text(
-                    controller.bodyFatPercentageController.text,
-                    style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
-                  ),
-                  SizedBox(height: 5),
-                  TextButton(
-                      onPressed: () {
-                        controller.navToCaloricIntakeView();
-                      },
-                      child: Text("Caloric intake",
-                          style: TextStyle(fontSize: 25, color: Colors.white))),
-                  Text(
-                    controller.caloricIntakeController.text,
-                    style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
-                  ),
-                ],
+            appBar: AppBar(
+              title: Text(
+                "Measure",
+                style: TextStyle(fontSize: 27),
+              ),
+              centerTitle: true,
+              automaticallyImplyLeading: false,
+            ),
+            body: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
+              child: Padding(
+                padding: EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 10),
+                    Text("CORE",
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Color(0xFFCCCCCC),
+                            letterSpacing: 2)),
+                    SizedBox(height: 15),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToWeightView();
+                        },
+                        child: Text("Weight",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.weightController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    SizedBox(height: 5),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToBodyFatPercentageView();
+                        },
+                        child: Text("Body Fat Percentage",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    SizedBox(height: 5),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToCaloricIntakeView();
+                        },
+                        child: Text("Caloric Intake",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.caloricIntakeController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    SizedBox(height: 15),
+                    Text("BODY PARTS",
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Color(0xFFCCCCCC),
+                            letterSpacing: 2)),
+                    SizedBox(height: 10),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToNeckView();
+                        },
+                        child: Text("Neck",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToShouldersView();
+                        },
+                        child: Text("Shoulders",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToChestView();
+                        },
+                        child: Text("Chest",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    SizedBox(height: 5),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToLeftBicepsView();
+                        },
+                        child: Text("Left Bicep",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    SizedBox(height: 5),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToRightBicepsView();
+                        },
+                        child: Text("Right Bicep",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    SizedBox(height: 5),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToLeftForearmView();
+                        },
+                        child: Text("Left Forearm",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    SizedBox(height: 5),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToRightForearmView();
+                        },
+                        child: Text("Right Forearm",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    SizedBox(height: 5),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToUpperAbsView();
+                        },
+                        child: Text("Upper Abs",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    SizedBox(height: 5),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToWaistView();
+                        },
+                        child: Text("Waist",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    SizedBox(height: 5),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToLowerAbsView();
+                        },
+                        child: Text("Lower Abs",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    SizedBox(height: 5),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToHipsView();
+                        },
+                        child: Text("Hips",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    SizedBox(height: 5),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToLeftThighView();
+                        },
+                        child: Text("Left Thigh",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    SizedBox(height: 5),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToRightThighView();
+                        },
+                        child: Text("Right Thigh",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    SizedBox(height: 5),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToLeftCalfView();
+                        },
+                        child: Text("Left Calf",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          controller.navToRightCalfView();
+                        },
+                        child: Text("Right Calf",
+                            style:
+                                TextStyle(fontSize: 25, color: Colors.white))),
+                    Text(
+                      controller.bodyFatPercentageController.text,
+                      style: TextStyle(fontSize: 25, color: Color(0xFFCCCCCC)),
+                    ),
+                  ],
+                ),
               ),
             ),
             bottomNavigationBar: BottomAppBar(

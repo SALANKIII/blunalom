@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class WeightView extends StatelessWidget {
-  const WeightView({super.key});
+class NeckView extends StatelessWidget {
+  const NeckView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class WeightView extends StatelessWidget {
             padding: EdgeInsets.all(20),
             child: Title(
                 color: Colors.white,
-                child: Text("Weight", style: TextStyle(fontSize: 40))),
+                child: Text("Neck", style: TextStyle(fontSize: 40))),
           ),
           Padding(
             padding: EdgeInsets.all(20),
@@ -21,7 +21,7 @@ class WeightView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("HISTORY", style: TextStyle(letterSpacing: 3, color: Color(0xFFCCCCCC))),
-                Icon(Icons.add, size: 30,),
+                IconButton(icon: Icon(Icons.add, size: 30,),onPressed: (){}),
               ],
             ),
           ),

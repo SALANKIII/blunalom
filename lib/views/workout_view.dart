@@ -18,6 +18,7 @@ class WorkoutView extends StatelessWidget {
                 style: TextStyle(fontSize: 27),
               ),
               centerTitle: true,
+              automaticallyImplyLeading: false,
             ),
             body: Padding(
               padding: EdgeInsets.all(20),

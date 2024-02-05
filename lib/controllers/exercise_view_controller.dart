@@ -7,18 +7,18 @@ import 'package:get/get.dart';
 
 class ExercisesViewController extends GetxController{
     void navToProfileView(){
-    Get.to(ProfileView(), transition: Transition.cupertino);
+    Get.to(ProfileView());
   }
   void navToHistoryView(){
-    Get.to(HistoryView(), transition: Transition.cupertino);
+    Get.to(HistoryView());
   }
   void navToWorkoutView(){
-    Get.to(WorkoutView(), transition: Transition.cupertino);
+    Get.to(WorkoutView());
   }
   void navToExercisesView(){
-    Get.to(ExercisesView(), transition: Transition.cupertino);
+    Get.to(ExercisesView());
   }
   void navToMeasureView(){
-    Get.to(MeasureView(), transition: Transition.cupertino);
+    Get.to(MeasureView());
   }
 }

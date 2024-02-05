@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BodyFatPercentageView extends StatelessWidget {
-  const BodyFatPercentageView({super.key});
+class RightCalfView extends StatelessWidget {
+  const RightCalfView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class BodyFatPercentageView extends StatelessWidget {
             padding: EdgeInsets.all(20),
             child: Title(
                 color: Colors.white,
-                child: Text("Body fat percentage", style: TextStyle(fontSize: 40))),
+                child: Text("Right Calf", style: TextStyle(fontSize: 40))),
           ),
           Padding(
             padding: EdgeInsets.all(20),
