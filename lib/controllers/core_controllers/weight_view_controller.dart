@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class WeightViewController extends GetxController {
-  WeightViewController({required this.weightList, required this.dateTime});
+  WeightViewController({required this.weightList});
   List<Weight> weightList;
-  DateTime dateTime;
 
   void navToWeightAddView() async {
     Weight weight = await Get.to(WeightAddView());
@@ -18,7 +17,7 @@ class WeightViewController extends GetxController {
   List<Widget> getRows() {
     List<Widget> temp = [];
 
-    for (Weight weight in weightList) {
+    for (Weight weight in weightList.reversed) {
       temp.add(
         Padding(
           padding: EdgeInsets.all(20),
@@ -27,7 +26,7 @@ class WeightViewController extends GetxController {
             children: [
               Text("${weight.weight.toString()}kg",
                   style: TextStyle(color: Colors.white, fontSize: 20)),
-                  Text("${dateTime}",
+                  Text("${weight.date.toString().split(' ')}",
                   style: TextStyle(color: Colors.white, fontSize: 20)),
             ],
           ),

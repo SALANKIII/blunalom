@@ -4,15 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class WeightView extends StatelessWidget {
-  WeightView({required this.weightList, required this.dateTime,});
+  WeightView({required this.weightList});
   List<Weight> weightList = [];
-  DateTime dateTime;
 
   late WeightViewController controller;
 
   @override
   Widget build(BuildContext context) {
-    controller = Get.put(WeightViewController(weightList: weightList, dateTime: dateTime));
+    controller = Get.put(WeightViewController(weightList: weightList));
     return GetBuilder<WeightViewController>(
         init: controller,
         builder: (_) {

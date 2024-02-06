@@ -18,7 +18,7 @@ class ProfileView extends StatelessWidget {
                 style: TextStyle(fontSize: 27),
               ),
               actions: [
-                IconButton(onPressed: (){}, icon: Icon(Icons.settings))
+                IconButton(onPressed: () {}, icon: Icon(Icons.settings))
               ],
               centerTitle: true,
             ),
@@ -29,28 +29,37 @@ class ProfileView extends StatelessWidget {
                   Row(
                     children: [
                       //profilepic
-                      Icon(Icons.person, size: 40,),
+                      Icon(
+                        Icons.person,
+                        size: 40,
+                      ),
                       //name and data
                       Padding(
                         padding: EdgeInsets.only(left: 20),
                         child: Column(
                           children: [
                             Text("Name"),
-                            SizedBox(height: 5,),
+                            SizedBox(
+                              height: 5,
+                            ),
                             Text("0 workouts"),
                           ],
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 20,),
-                  Text("QUICK START",
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Color(0xFFCCCCCC),
-                              letterSpacing: 2)),
-                              SizedBox(height: 20,),
-                  Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),)
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text("DASHBOARD",
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xFFCCCCCC),
+                          letterSpacing: 2)),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  
                 ],
               ),
             ),

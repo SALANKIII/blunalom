@@ -4,17 +4,18 @@ import 'package:get/get.dart';
 
 class WeightAddViewController extends GetxController {
   TextEditingController weight = TextEditingController();
-  DateTime datetime = DateTime.now();
 
   void kiurites() {
     weight.clear();
   }
 
   void rogzites() {
+    DateTime date= DateTime.now();
+    print(date);
     Get.back(
       result: Weight(
         weight: weight.value.text,
-        date: datetime,
+        date:date,
       ),
     );
     update();

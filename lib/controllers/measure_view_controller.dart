@@ -38,7 +38,7 @@ class MeasureViewController extends GetxController {
     Get.snackbar("${weight.weight}kg", "Succesfully added!");
   }
   void navToWeightView() {
-    Get.to(WeightView(weightList: weightList, dateTime: dateTime,));
+    Get.to(WeightView(weightList: weightList));
   }
 
   void navToProfileView() {
